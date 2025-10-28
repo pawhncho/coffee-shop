@@ -1,0 +1,350 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Figtree", sans-serif;
+	user-select: none;
+}
+
+body {
+	color: #2C1A0F;
+}
+
+h1 { font-size: 26px; font-family: "Exo 2", sans-serif; }
+
+h2 { font-size: 18px; font-family: "Exo 2", sans-serif; }
+
+p { font-size: 14px; }
+
+button {
+	user-select: auto;
+	cursor: pointer;
+	font-family: "Overpass", sans-serif;
+}
+
+main {
+	overflow: hidden;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: #F7EFE6;
+	padding: 12px;
+}
+
+header nav.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 16px;
+}
+
+header nav.navbar .navbar-item {
+	color: #2C1A0F;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+section.banner {
+	height: 400px;
+	background: url("./banner.jfif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+section.banner .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 36px;
+}
+
+section.banner .overlay .secondary-content {
+	color: #CCC;
+	font-size: 48px;
+	letter-spacing: -5px;
+	font-weight: 400;
+	height: 40px;
+	word-spacing: 10px;
+}
+
+section.banner .overlay .primary-content {
+	color: #E6C9AD;
+	font-size: 84px;
+	font-weight: 900;
+	letter-spacing: -1px;
+	font-family: "Exo 2", sans-serif;
+}
+
+section.banner .overlay button {
+	border: 0;
+	outline: 0;
+	border-radius: 0;
+	padding: 8px 16px;
+	border-radius: 36px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #FFFFFF;
+	background: #D9B382;
+}
+
+section.body {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	background: #F7EFE6;
+	color: #2C1A0F;
+	padding: 36px;
+}
+
+section.body .top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+section.body .top-categories .list {
+	display: flex;
+	justify-content: center;
+	gap: 36px;
+}
+
+section.body .top-categories .list .list-item {
+	width: 200px;
+	height: 180px;
+	position: relative;
+	border-radius: 16px;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+section.body .top-categories .list .list-item .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 16px;
+}
+
+section.body .top-categories .list .list-item .overlay h2 {
+	color: #FFFFFF;
+}
+
+section.body .top-categories .list .list-item .overlay p {
+	color: #CCC;
+}
+
+section.body .top-categories .list .list-item.cappuccino {
+	background: url('./categories/cappuccino.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+section.body .top-categories .list .list-item.espresso-americano {
+	background: url('./categories/espresso-americano.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+section.body .top-categories .list .list-item.mocha {
+	background: url('./categories/mocha.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+section.body .top-categories h1 {
+	font-weight: 800;
+	text-align: center;
+}
+
+section.body .top-categories p {
+	font-weight: 600;
+	text-align: center;
+}
+
+section.body .top-shakes {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+section.body .top-shakes .list {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	align-self: center;
+	gap: 36px;
+}
+
+section.body .top-shakes .list .list-item {
+	width: 180px;
+	height: 200px;
+	border-radius: 16px;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 8px;
+	background: #F2E3D5;
+}
+
+section.body .top-shakes .list .list-item .likes {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+section.body .top-shakes .list .list-item img {
+	width: 60%;
+	align-self: center;
+}
+
+section.body .top-shakes .list .list-item h2 {
+	font-size: 16px;
+	align-self: center;
+}
+
+section.body .top-shakes .list .list-item .detail {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+section.body .top-shakes .list .list-item .detail p {
+	font-weight: 700;
+}
+
+section.body .top-shakes .list .list-item .detail button {
+	border: 0;
+	outline: 0;
+	border-radius: 0;
+	padding: 4px 12px;
+	border-radius: 36px;
+	font-size: 10px;
+	font-weight: 600;
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+section.body .top-shakes h1 {
+	font-weight: 800;
+	text-align: center;
+}
+
+section.body .top-shakes p {
+	font-weight: 600;
+	text-align: center;
+}
+
+section.body .blogs {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+section.body .blogs .list {
+	display: flex;
+	justify-content: center;
+	gap: 36px;
+}
+
+section.body .blogs .list-item {
+	min-width: 300px;
+	max-width: 300px;
+	position: relative;
+	border-radius: 16px;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	background: #F2E3D5;
+}
+
+section.body .blogs .list-item img {
+	width: 100%;
+	align-self: center;
+	border-radius: 16px;
+	height: 180px;
+	object-fit: cover;
+}
+
+section.body .blogs .list-item h2 {
+	font-size: 16px;
+	font-weight: 800;
+}
+
+section.body .blogs .list-item p {
+	text-align: left;
+}
+
+section.body .blogs .list-item button {
+	border: 0;
+	outline: 0;
+	border-radius: 0;
+	padding: 4px 12px;
+	border-radius: 36px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+section.body .blogs h1 {
+	font-weight: 800;
+	text-align: center;
+}
+
+section.body .blogs p {
+	font-weight: 600;
+	text-align: center;
+	color: #;
+}
+
+footer {
+	background: #121212;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 16px;
+}
+
+footer .option {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+footer .option h2 {
+	color: #E6C9AD;
+}
+
+footer .option .list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+footer .option .list p {
+	color: #FFFFFF;
+}
